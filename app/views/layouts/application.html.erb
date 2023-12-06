@@ -1,16 +1,22 @@
+<!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Database</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <!-- Head content goes here -->
+</head>
+<body>
+  <header>
+    <!-- Navigation bar content goes here -->
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'About', about_path %>
+    <%= link_to 'Contact', contact_path %>
+    <%= link_to 'Sign in with Google', '/auth/google_oauth2' %>
+  </header>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
+  <main>
     <%= yield %>
-  </body>
+  </main>
+
+  <!-- Other layout content goes here -->
+</body>
 </html>
